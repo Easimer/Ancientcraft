@@ -1,0 +1,416 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	"train_peasant"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"life_stealer_rage"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityChannelTime"			"2.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"120"
+		
+		"OnChannelFinish"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_tower_peasant"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_rax_peasant"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_miner"
+				"Target" "POINT"
+				"UnitCount"	"1"
+			}
+			//"SpawnUnit"
+			//{
+			//	"UnitName"	"npc_dota_creature_urgod"
+			//	"Target" "POINT"
+			//	"UnitCount"	"1"
+			//}
+		}
+	}
+	
+	"train_footman"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"dragon_knight_dragon_blood"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+		"AbilityChannelTime"			"10.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"180"
+		
+		"OnChannelFinish"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_footman"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"train_acolyte"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"warlock_fatal_bonds"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityChannelTime"			"2.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"120"
+		
+		"OnChannelFinish"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_tower_ghoul"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_rax_ghoul"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_miner_ghoul"
+				"Target" "POINT"
+				"UnitCount"	"1"
+			}
+			//"SpawnUnit"
+			//{
+			//	"UnitName"	"npc_dota_creature_urgod"
+			//	"Target" "POINT"
+			//	"UnitCount"	"1"
+			//}
+		}
+	}
+	
+	"train_ghoul"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"life_stealer_feast"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+		"AbilityChannelTime"			"10.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"180"
+		
+		"OnChannelFinish"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_ghoul"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"footman_defend"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"sven_warcry"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"dragon_knight_dragon_tail"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 15.0 10.0 5.0"
+		"AbilityDuration"				"5.0 6.0 8.0 10.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0 0 0 0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_armor"		"20"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_movespeed"	"-60"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_radius"		"0"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"warcry_duration"	"5.0"
+			}
+		}
+	}
+	
+	"commander_warcry"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"sven_warcry"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"axe_berserkers_call"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120.0"
+		"AbilityDuration"				"15.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_armor"		"20"		
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_movespeed"	"60"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_radius"		"600"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"warcry_duration"	"15.0"
+			}
+		}
+	}
+	
+	"build_tower"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"undying_tombstone"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityChannelTime"			"5.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"200"
+		"OnChannelSucceeded"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_btower"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"mine"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+		//"AbilityUnitDamageType"			"DAMAGE_TYPE_COMPOSITE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"alchemist_goblins_greed"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"
+		"AbilityChannelTime"			"10.0"
+		"AbilityManaCost"				"0"
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+				{
+					"ScriptFile"		"addon_game_mode.lua"
+					"Function"		"GiveGold"
+					"Target"		"TARGET"
+				}
+		}
+	}
+	
+	"spook"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"night_stalker_crippling_fear"
+		"BaseClass"						"ability_datadriven"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"12000"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"666"
+		"AbilityChannelTime"			"0.0"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"addon_game_mode.lua"
+					"Function"		"spook"
+					"Target"		"TARGET"
+			}
+		}
+	}
+	
+	"build_rax"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"undying_tombstone"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityChannelTime"			"5.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"750"
+		"OnChannelSucceeded"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_bfort"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"debug_unit"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"undying_tombstone"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"11000"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"addon_game_mode.lua"
+					"Function"		"DebugUnit"
+					"Target"		"TARGET"
+			}
+		}
+	}
+}

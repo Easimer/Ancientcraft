@@ -1,0 +1,68 @@
+"DOTAAbilities"
+{	
+	"item_peasants"
+	{
+		"ID"							"1006"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"BaseClass"						"item_datadriven"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		"ItemCost"						"50"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"0"
+		"ItemAlertable"					"1"
+		"ItemAliases"					"mana;mb"
+		"OnSpellStart"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_tower_peasant"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_rax_peasant"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_creature_miner"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"item_treecut"
+	{
+		"ID"	"1007"
+		
+		"AbilityBehavior" "DOTA_UNIT_TARGET_TREE"
+		"BaseClass"		"item_datadriven"
+		
+		"AbilityCooldown" "2.0"
+		"ItemCost" "0"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"		"addon_game_mode.lua"
+				"Function"		"CutTree" 
+				"Target"		"TARGET"
+			}
+		}
+	}
+}
