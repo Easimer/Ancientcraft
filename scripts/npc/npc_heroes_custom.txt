@@ -16,24 +16,26 @@
 	"npc_dota_hero_alliance_commander"
 	{
 		"override_hero"				"npc_dota_hero_kunkka"
+		"AbilityLayout" "6"
 		"Ability1" "train_peasant"
 		"Ability2" "train_footman"
-		"Ability3" ""
+		"Ability3" "omniknight_degen_aura"
 		"Ability4" "commander_warcry"
-		"Ability5" ""
-		"Ability6" "attribute_bonus"
+		"Ability5" "attribute_bonus"
+		"Ability6" "oracle_false_promise"
 		"VisionNighttimeRange"		"900"
 	}
 	
 	"npc_dota_hero_scourge_commander"
 	{
 		"override_hero"				"npc_dota_hero_warlock"
+		"AbilityLayout" "6"
 		"Ability1" "train_acolyte"
 		"Ability2" "train_ghoul"
-		"Ability3" ""
+		"Ability3" "abyssal_underlord_atrophy_aura"
 		"Ability4" "commander_warcry"
-		"Ability5" ""
-		"Ability6" "attribute_bonus"
+		"Ability5" "attribute_bonus"
+		"Ability6" "warlock_shadow_word"
 		"VisionNighttimeRange"		"1200"
 	}
 	
@@ -41,11 +43,12 @@
 	{
 	"override_hero"	"npc_dota_hero_sniper"
 	"Ability1" "debug_unit"
+	"Ability2" ""
 	"Ability3" ""
 	"Ability4" ""
-	"Ability5" ""
-	"Ability6" "attribute_bonus"
-	"VisionDaytimeRange"        "11000"
-	"VisionNighttimeRange"		"11000"
+	"Ability5" "attribute_bonus"
+	"Ability6" ""
+	"VisionDaytimeRange"        "4200"
+	"VisionNighttimeRange"		"3600"
 	}
 }

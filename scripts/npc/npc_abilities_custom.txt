@@ -8,7 +8,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"life_stealer_rage"
 		
@@ -22,34 +21,16 @@
 		"AbilityCooldown"				"60"
 		"AbilityChannelTime"			"2.0"
 		"AbilityManaCost"				"0"
-		"AbilityGoldCost"				"120"
+		"AbilityGoldCost"				"80"
 		
-		"OnChannelFinish"
+		"OnChannelSucceeded"
 		{
-			"SpawnUnit"
+			"RunScript"
 			{
-				"UnitName"	"npc_dota_creature_tower_peasant"
+				"ScriptFile" "addon_game_mode.lua"
+				"Function" "SpawnPeasant"
 				"Target" "POINT"
-				"UnitCount"		"1"
 			}
-			"SpawnUnit"
-			{
-				"UnitName"	"npc_dota_creature_rax_peasant"
-				"Target" "POINT"
-				"UnitCount"		"1"
-			}
-			"SpawnUnit"
-			{
-				"UnitName"	"npc_dota_creature_miner"
-				"Target" "POINT"
-				"UnitCount"	"1"
-			}
-			//"SpawnUnit"
-			//{
-			//	"UnitName"	"npc_dota_creature_urgod"
-			//	"Target" "POINT"
-			//	"UnitCount"	"1"
-			//}
 		}
 	}
 	
@@ -58,7 +39,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"dragon_knight_dragon_blood"
 		
@@ -74,7 +54,7 @@
 		"AbilityManaCost"				"0"
 		"AbilityGoldCost"				"180"
 		
-		"OnChannelFinish"
+		"OnChannelSucceeded"
 		{
 			"SpawnUnit"
 			{
@@ -90,7 +70,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"warlock_fatal_bonds"
 		
@@ -106,32 +85,14 @@
 		"AbilityManaCost"				"0"
 		"AbilityGoldCost"				"120"
 		
-		"OnChannelFinish"
+		"OnChannelSucceeded"
 		{
-			"SpawnUnit"
+			"RunScript"
 			{
-				"UnitName"	"npc_dota_creature_tower_ghoul"
+				"ScriptFile" "addon_game_mode.lua"
+				"Function" "SpawnPeasant"
 				"Target" "POINT"
-				"UnitCount"		"1"
 			}
-			"SpawnUnit"
-			{
-				"UnitName"	"npc_dota_creature_rax_ghoul"
-				"Target" "POINT"
-				"UnitCount"		"1"
-			}
-			"SpawnUnit"
-			{
-				"UnitName"	"npc_dota_creature_miner_ghoul"
-				"Target" "POINT"
-				"UnitCount"	"1"
-			}
-			//"SpawnUnit"
-			//{
-			//	"UnitName"	"npc_dota_creature_urgod"
-			//	"Target" "POINT"
-			//	"UnitCount"	"1"
-			//}
 		}
 	}
 	
@@ -140,7 +101,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"life_stealer_feast"
 		
@@ -156,7 +116,7 @@
 		"AbilityManaCost"				"0"
 		"AbilityGoldCost"				"180"
 		
-		"OnChannelFinish"
+		"OnChannelSucceeded"
 		{
 			"SpawnUnit"
 			{
@@ -268,7 +228,6 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"ability_datadriven"
 		"AbilityTextureName"			"undying_tombstone"
 		
@@ -279,15 +238,47 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60"
-		"AbilityChannelTime"			"5.0"
+		"AbilityCooldown"				"15"
+		"AbilityChannelTime"			"10.0"
 		"AbilityManaCost"				"0"
 		"AbilityGoldCost"				"200"
+		
 		"OnChannelSucceeded"
 		{
 			"SpawnUnit"
 			{
 				"UnitName"	"npc_dota_btower"
+				"Target" "POINT"
+				"UnitCount"		"1"
+			}
+		}
+	}
+	
+	"build_guard_tower"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"undying_tombstone"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10"
+		"AbilityChannelTime"			"6.5"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"70"
+		
+		"OnChannelSucceeded"
+		{
+			"SpawnUnit"
+			{
+				"UnitName"	"npc_dota_gtower"
 				"Target" "POINT"
 				"UnitCount"		"1"
 			}
@@ -325,7 +316,7 @@
 		}
 	}
 	
-	"spook"
+	"spook" //TODO: this spell is 1spooky3me and crashes the game DO NOT USE THIS FAGGOT
 	{
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"			"night_stalker_crippling_fear"
@@ -347,7 +338,7 @@
 			{
 				"ScriptFile"		"addon_game_mode.lua"
 					"Function"		"spook"
-					"Target"		"TARGET"
+					"Target"		"POINT"
 			}
 		}
 	}
@@ -369,18 +360,36 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"60"
-		"AbilityChannelTime"			"5.0"
+		"AbilityChannelTime"			"10.0"
 		"AbilityManaCost"				"0"
-		"AbilityGoldCost"				"750"
+		"AbilityGoldCost"				"350"
 		"OnChannelSucceeded"
 		{
-			"SpawnUnit"
+			"RunScript"
 			{
-				"UnitName"	"npc_dota_bfort"
-				"Target" "POINT"
-				"UnitCount"		"1"
+				"ScriptFile" "addon_game_mode.lua"
+				"Function"	"SpawnBarracks"
+				"Target"	"POINT"
 			}
 		}
+	}
+	
+	"cannibalise"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"life_stealer_consume"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
 	}
 	
 	"debug_unit"
@@ -410,6 +419,69 @@
 				"ScriptFile"		"addon_game_mode.lua"
 					"Function"		"DebugUnit"
 					"Target"		"TARGET"
+			}
+		}
+	}
+	
+	"train_peasant_base"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"life_stealer_rage"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"
+		"AbilityChannelTime"			"5.0"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile" "addon_game_mode.lua"
+				"Function" "SpawnPeasant"
+				"Target" "POINT"
+			}
+		}
+	}
+	
+	"train_acolyte_base"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"warlock_fatal_bonds"
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		"AbilityChannelTime"			"2.0"
+		"AbilityManaCost"				"0"
+		"AbilityGoldCost"				"120"
+		
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+			{
+				"ScriptFile" "addon_game_mode.lua"
+				"Function"	"SpawnPeasant"
+				"Target"	"POINT"
 			}
 		}
 	}

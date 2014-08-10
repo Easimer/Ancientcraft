@@ -7,5 +7,5 @@
 {
 	"npc_dota_hero_kunkka"			"1"
 	"npc_dota_hero_warlock"			"1"
-	//"npc_dota_hero_sniper"			"1"
+	//"npc_dota_hero_sniper"			"1" //debug joe
 }
